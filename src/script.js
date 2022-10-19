@@ -193,7 +193,7 @@ fontLoader.load(
             }
         )
         devopswebdevguide.computeBoundingBox()
-        console.log(devopswebdevguide.boundingBox)
+        // console.log(devopswebdevguide.boundingBox)
         devopswebdevguide.translate(
             1.07, //x
             -1.3, //y
@@ -347,23 +347,22 @@ window.addEventListener('mousemove', (event) =>
 
 window.addEventListener('click', () =>
 {
-    console.log(camera.position)
     if(currentIntersect)
     {
         switch(currentIntersect.object)
         {
             case planeDevopsMesh:
-                console.log('plane devops mesh')
+                // console.log('plane devops mesh')
                 window.open('https://github.com/Mark-Cooper-Janssen-Vooles/devops-webdev-guide', '_blank')
                 break
 
             case planeBackendMesh:
-                console.log('plane backend mesh')
+                // console.log('plane backend mesh')
                 window.open('https://github.com/Mark-Cooper-Janssen-Vooles/backend-webdev-guide', '_blank')
                 break
 
             case planeFrontendMesh:
-                console.log('plane backend mesh')
+                // console.log('plane backend mesh')
                 window.open('https://github.com/Mark-Cooper-Janssen-Vooles/frontend-webdev-guide', '_blank')
                 break
         }
@@ -430,7 +429,7 @@ const tick = () =>
     ])
     if (intersects.length) {
         if (!currentIntersect) {
-            console.log('mouse enter')
+            // console.log('mouse enter')
             canvas.style.cursor = 'pointer'
         }
         currentIntersect = intersects[0]
@@ -449,7 +448,7 @@ const tick = () =>
         }
     } else {
         if (currentIntersect) {
-            console.log('mouse leave')
+            // console.log('mouse leave')
             canvas.style.cursor = 'default'
         }
         currentIntersect = null
