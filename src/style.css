@@ -1,0 +1,53 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.container {
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    width: 300px;
+    height: 125px;
+
+    color: #74FE88;
+
+    /* border: 3px solid white; */
+}
+
+i {
+    color: #8F80FE;
+}
+i:hover {
+    color: #FE8070;
+}
+
+.icon-section {
+    padding-top: 10px;
+}
+
+.info {
+    position: absolute;
+    right: 20px;
+    top: 60%;
+
+    width: 260px;
+
+    color: #74FE88;
+    /* border: 3px solid white; */
+}
