@@ -329,7 +329,7 @@ controls.maxAzimuthAngle = Math.PI / 45;
 controls.maxPolarAngle = 1.68
 controls.minPolarAngle = 1.52
 // zoom in / out with wheel
-controls.maxDistance = 2.5
+controls.maxDistance = 3
 controls.minDistance = 2
 
 
