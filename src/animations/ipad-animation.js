@@ -26,21 +26,13 @@ export const ipadAnimation = () => {
 	// Scene
 	const scene = new THREE.Scene();
 
-	// Axes Helper
-	const axesHelper = new THREE.AxesHelper();
-	// scene.add(axesHelper)
-
-	// Textures
-	// const textureLoader = new THREE.TextureLoader()
-	// const matcapTexture = textureLoader.load('/textures/matcaps/8.png')
-
 	// Fonts
 	let devopswebdevguideMesh;
 
 	const fontLoader = new FontLoader();
 	fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
 		// title "markjanssen webdev learnings"
-		const fontSize = 0.435;
+		const fontSize = 0.235;
 		// markjanssen
 		const textGeometry1 = new TextGeometry("markjanssen", {
 			font,
@@ -56,8 +48,8 @@ export const ipadAnimation = () => {
 		textGeometry1.computeBoundingBox();
 		// console.log(textGeometry1.boundingBox)
 		textGeometry1.translate(
-			-2.5, //x
-			1.5 - 0.4 - 0.5, //y
+			-0.9, //x
+			1.5 - 0.2 - 0.5, //y
 			-textGeometry1.boundingBox.max.z * 0.5 //z
 		);
 
@@ -74,10 +66,9 @@ export const ipadAnimation = () => {
 			bevelSegments: 3,
 		});
 		textGeometry2.computeBoundingBox();
-		// console.log(textGeometry2.boundingBox)
 		textGeometry2.translate(
-			-2.5, //x
-			1.5 - 1 - 0.5, //y
+			-0.9, //x
+			1.5 - 0.55 - 0.5, //y
 			-textGeometry2.boundingBox.max.z * 0.5 //z
 		);
 
@@ -94,17 +85,13 @@ export const ipadAnimation = () => {
 			bevelSegments: 3,
 		});
 		textGeometry3.computeBoundingBox();
-		// console.log(textGeometry3.boundingBox)
 		textGeometry3.translate(
-			-2.5, // x
-			1.5 - 1.6 - 0.5, //y
+			-0.9, // x
+			1.5 - 0.9 - 0.5, //y
 			-textGeometry3.boundingBox.max.z * 0.5 //z
 		);
 
-		// const textMaterial = new THREE.MeshBasicMaterial()
-		// const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
 		const material = new THREE.MeshNormalMaterial();
-		// textMaterial.wireframe = true
 		const text1 = new THREE.Mesh(textGeometry1, material);
 		const text2 = new THREE.Mesh(textGeometry2, material);
 		const text3 = new THREE.Mesh(textGeometry3, material);
@@ -128,10 +115,9 @@ export const ipadAnimation = () => {
 			bevelSegments: 3,
 		});
 		frontendwebdevguide.computeBoundingBox();
-		// console.log(frontendwebdevguide.boundingBox)
 		frontendwebdevguide.translate(
-			1.02, //x
-			-0.9, //y
+			-0.9, //x
+			-0.5, //y
 			-frontendwebdevguide.boundingBox.max.z * 0.5 //z
 		);
 
@@ -148,10 +134,9 @@ export const ipadAnimation = () => {
 			bevelSegments: 3,
 		});
 		backendwebdevguide.computeBoundingBox();
-		// console.log(frontendwebdevguide.boundingBox)
 		backendwebdevguide.translate(
-			1.0, //x
-			-1.1, //y
+			-0.9, //x
+			-0.7, //y
 			-backendwebdevguide.boundingBox.max.z * 0.5 //z
 		);
 
@@ -168,10 +153,9 @@ export const ipadAnimation = () => {
 			bevelSegments: 3,
 		});
 		devopswebdevguide.computeBoundingBox();
-		// console.log(devopswebdevguide.boundingBox)
 		devopswebdevguide.translate(
-			1.07, //x
-			-1.3, //y
+			-0.9, //x
+			-0.9, //y
 			-devopswebdevguide.boundingBox.max.z * 0.5 //z
 		);
 
@@ -186,19 +170,11 @@ export const ipadAnimation = () => {
 		scene.add(devopswebdevguideMesh);
 	});
 
-	// Objects
-	// const planeGeometry = new THREE.PlaneGeometry(5, 2.8)
-	// planeGeometry.computeBoundingBox()
-	// console.log(planeGeometry.boundingBox)
-	// const planeMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 })
-	// const planeMesh = new THREE.Mesh(planeGeometry, planeMaterial)
-	// scene.add(planeMesh)
-
 	// Devops Object section
 	const devopsCube = new THREE.BoxGeometry(0.1, 0.1, 0.1);
 	const devopsCubeMaterial = new THREE.MeshNormalMaterial();
 	const devopsCubeMesh = new THREE.Mesh(devopsCube, devopsCubeMaterial);
-	devopsCubeMesh.position.set(2.65, -1.25, 0);
+	devopsCubeMesh.position.set(0.8, -0.85, 0);
 	scene.add(devopsCubeMesh);
 
 	const planeDevopsGeometry = new THREE.PlaneGeometry(1.42, 0.13);
@@ -221,7 +197,7 @@ export const ipadAnimation = () => {
 	const backendCube = new THREE.BoxGeometry(0.1, 0.1, 0.1);
 	const backendCubeMaterial = new THREE.MeshNormalMaterial();
 	const backendCubeMesh = new THREE.Mesh(backendCube, backendCubeMaterial);
-	backendCubeMesh.position.set(2.65, -1.05, 0);
+	backendCubeMesh.position.set(0.8, -0.675, 0);
 	scene.add(backendCubeMesh);
 
 	const planeBackendGeometry = new THREE.PlaneGeometry(1.5, 0.13);
@@ -244,7 +220,7 @@ export const ipadAnimation = () => {
 	const frontendCube = new THREE.BoxGeometry(0.1, 0.1, 0.1);
 	const frontendCubeMaterial = new THREE.MeshNormalMaterial();
 	const frontendCubeMesh = new THREE.Mesh(frontendCube, frontendCubeMaterial);
-	frontendCubeMesh.position.set(2.65, -0.85, 0);
+	frontendCubeMesh.position.set(0.8, -0.475, 0);
 	scene.add(frontendCubeMesh);
 
 	const planeFrontendGeometry = new THREE.PlaneGeometry(1.5, 0.13);
@@ -286,7 +262,6 @@ export const ipadAnimation = () => {
 	});
 
 	// Base camera
-
 	const camera = new THREE.PerspectiveCamera(
 		75,
 		sizes.width / sizes.height,
@@ -332,7 +307,6 @@ export const ipadAnimation = () => {
 		if (currentIntersect) {
 			switch (currentIntersect.object) {
 				case planeDevopsMesh:
-					// console.log('plane devops mesh')
 					window.open(
 						"https://github.com/Mark-Cooper-Janssen-Vooles/devops-webdev-guide",
 						"_blank"
@@ -340,7 +314,6 @@ export const ipadAnimation = () => {
 					break;
 
 				case planeBackendMesh:
-					// console.log('plane backend mesh')
 					window.open(
 						"https://github.com/Mark-Cooper-Janssen-Vooles/backend-webdev-guide",
 						"_blank"
@@ -348,7 +321,6 @@ export const ipadAnimation = () => {
 					break;
 
 				case planeFrontendMesh:
-					// console.log('plane backend mesh')
 					window.open(
 						"https://github.com/Mark-Cooper-Janssen-Vooles/frontend-webdev-guide",
 						"_blank"
@@ -407,7 +379,6 @@ export const ipadAnimation = () => {
 				)
 				.multiplyScalar(0.025);
 			camera.position.addVectors(camPos, camShift);
-			//   controls.update();
 		}
 
 		// ray caster
@@ -419,7 +390,6 @@ export const ipadAnimation = () => {
 		]);
 		if (intersects.length) {
 			if (!currentIntersect) {
-				// console.log('mouse enter')
 				canvas.style.cursor = "pointer";
 			}
 			currentIntersect = intersects[0];
@@ -446,9 +416,6 @@ export const ipadAnimation = () => {
 			backendCubeMesh.rotation.set(0, 0, 0);
 			devopsCubeMesh.rotation.set(0, 0, 0);
 		}
-
-		// camera.position.y = Math.sin(elapsedTime)
-		// camera.position.x = Math.cos(elapsedTime)
 
 		// Update controls
 		controls.update();
