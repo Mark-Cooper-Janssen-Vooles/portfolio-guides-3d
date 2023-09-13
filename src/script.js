@@ -26,19 +26,29 @@ const renderMobileAnimation = () => {
   mobileAnimation();
 };
 
+let initialWidth = window.innerWidth
+
 // initial render
-if (window.innerWidth >= 1280) renderDesktopAnimation();
-if (window.innerWidth < 1280 && window.innerWidth >= 820) renderIpadAnimation();
-if (window.innerWidth < 820) renderMobileAnimation();
+if (initialWidth >= 1280) renderDesktopAnimation();
+if (initialWidth < 1280 && initialWidth >= 820) renderIpadAnimation();
+if (initialWidth < 820) renderMobileAnimation();
 
 // event listener for screen size
 window.addEventListener(
   "resize",
   (_) => {
-    if (window.innerWidth >= 1280) renderDesktopAnimation();
-    if (window.innerWidth < 1280 && window.innerWidth >= 820)
+    if (window.innerWidth >= 1280 && initialWidth < 1280) { 
+			renderDesktopAnimation(); 
+			initialWidth = window.innerWidth;
+		}
+    if (window.innerWidth < 1280 && window.innerWidth >= 820 && (initialWidth >= 1280 || initialWidth < 820)) {
       renderIpadAnimation();
-    if (window.innerWidth < 820) renderMobileAnimation();
+			initialWidth = window.innerWidth;
+		}
+    if (window.innerWidth < 820 && initialWidth >= 820) {
+			renderMobileAnimation();
+			initialWidth = window.innerWidth;
+		}
   },
   true
 );
