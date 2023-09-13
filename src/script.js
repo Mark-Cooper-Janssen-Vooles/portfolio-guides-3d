@@ -1,5 +1,6 @@
 import { desktopAnimation } from "./animations/desktop-animation";
 import { ipadAnimation } from "./animations/ipad-animation";
+import { mobileAnimation } from "./animations/mobile-animation";
 
 const resetCanvas = () => {
 	const newCanvas = document.createElement("canvas")
@@ -25,6 +26,7 @@ const renderIpadAnimation = () => {
 const renderMobileAnimation = () => {
   console.log("render for mobile");  
 	resetCanvas()
+	mobileAnimation()
 }
 
 
