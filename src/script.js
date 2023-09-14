@@ -32,23 +32,25 @@ const renderMobileAnimation = () => {
 let initialWidth = window.innerWidth
 
 // initial render
-if (initialWidth >= 1280) renderDesktopAnimation();
-if (initialWidth < 1280 && initialWidth >= 820) renderIpadAnimation();
-if (initialWidth < 820) renderMobileAnimation();
+const minDesktopWidth = 1056
+const minIpadWidth = 620
+if (initialWidth >= minDesktopWidth) renderDesktopAnimation();
+if (initialWidth < minDesktopWidth && initialWidth >= minIpadWidth) renderIpadAnimation();
+if (initialWidth < minIpadWidth) renderMobileAnimation();
 
 // event listener for screen size
 window.addEventListener(
   "resize",
   (_) => {
-    if (window.innerWidth >= 1280 && initialWidth < 1280) { 
+    if (window.innerWidth >= minDesktopWidth && initialWidth < minDesktopWidth) { 
 			renderDesktopAnimation(); 
 			initialWidth = window.innerWidth;
 		}
-    if (window.innerWidth < 1280 && window.innerWidth >= 820 && (initialWidth >= 1280 || initialWidth < 820)) {
+    if (window.innerWidth < minDesktopWidth && window.innerWidth >= minIpadWidth && (initialWidth >= minDesktopWidth || initialWidth < minIpadWidth)) {
       renderIpadAnimation();
 			initialWidth = window.innerWidth;
 		}
-    if (window.innerWidth < 820 && initialWidth >= 820) {
+    if (window.innerWidth < minIpadWidth && initialWidth >= minIpadWidth) {
 			renderMobileAnimation();
 			initialWidth = window.innerWidth;
 		}
