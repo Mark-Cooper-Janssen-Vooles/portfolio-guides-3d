@@ -196,7 +196,7 @@ export const desktopAnimation = () => {
   devopsCubeMesh.position.set(2.65, -1.25, 0);
   scene.add(devopsCubeMesh);
 
-  const planeDevopsGeometry = new THREE.PlaneGeometry(1.42, 0.13);
+  const planeDevopsGeometry = new THREE.PlaneGeometry(1.75, 0.13);
   const planeDevopsMaterial = new THREE.MeshBasicMaterial();
   planeDevopsMaterial.transparent = true;
   planeDevopsMaterial.opacity = 0;
@@ -205,7 +205,7 @@ export const desktopAnimation = () => {
     planeDevopsMaterial
   );
   planeDevopsGeometry.translate(
-    1.78, //x
+    1.9, //x
     -1.25, //y
     0 //z
   );
@@ -219,7 +219,7 @@ export const desktopAnimation = () => {
   backendCubeMesh.position.set(2.65, -1.05, 0);
   scene.add(backendCubeMesh);
 
-  const planeBackendGeometry = new THREE.PlaneGeometry(1.5, 0.13);
+  const planeBackendGeometry = new THREE.PlaneGeometry(1.75, 0.13);
   const planeBackendMaterial = new THREE.MeshBasicMaterial();
   planeBackendMaterial.transparent = true;
   planeBackendMaterial.opacity = 0;
@@ -228,7 +228,7 @@ export const desktopAnimation = () => {
     planeBackendMaterial
   );
   planeBackendGeometry.translate(
-    1.75, //x
+    1.85, //x
     -1.05, //y
     0 //z
   );
@@ -242,7 +242,7 @@ export const desktopAnimation = () => {
   frontendCubeMesh.position.set(2.65, -0.85, 0);
   scene.add(frontendCubeMesh);
 
-  const planeFrontendGeometry = new THREE.PlaneGeometry(1.5, 0.13);
+  const planeFrontendGeometry = new THREE.PlaneGeometry(1.75, 0.13);
   const planeFrontendMaterial = new THREE.MeshBasicMaterial();
   planeFrontendMaterial.transparent = true;
   planeFrontendMaterial.opacity = 0;
@@ -251,7 +251,7 @@ export const desktopAnimation = () => {
     planeFrontendMaterial
   );
   planeFrontendGeometry.translate(
-    1.75, //x
+    1.85, //x
     -0.85, //y
     0 //z
   );
