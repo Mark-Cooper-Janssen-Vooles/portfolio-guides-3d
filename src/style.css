@@ -58,3 +58,7 @@ i:hover {
     color: #74FE88;
     /* border: 3px solid white; */
 }
+
+a {
+    text-decoration: none
+}
