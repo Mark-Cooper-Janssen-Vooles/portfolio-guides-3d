@@ -27,7 +27,14 @@ body
 
     color: #74FE88;
 
-    /* border: 3px solid white; */
+    /* border: 3px solid white; */     
+}
+
+/* custom mobile css */
+@media (max-width: 819px) { 
+    .container {
+        bottom: 70px;
+    }
 }
 
 i {
