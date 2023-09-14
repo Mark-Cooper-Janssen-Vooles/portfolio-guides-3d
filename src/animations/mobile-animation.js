@@ -117,7 +117,7 @@ export const mobileAnimation = () => {
     frontendwebdevguide.computeBoundingBox();
     frontendwebdevguide.translate(
       -0.675, //x
-      -0.25, //y
+      -0.05, //y
       -frontendwebdevguide.boundingBox.max.z * 0.5 //z
     );
 
@@ -136,7 +136,7 @@ export const mobileAnimation = () => {
     backendwebdevguide.computeBoundingBox();
     backendwebdevguide.translate(
       -0.675, //x
-      -0.4, //y
+      -0.3, //y
       -backendwebdevguide.boundingBox.max.z * 0.5 //z
     );
 
@@ -177,10 +177,10 @@ export const mobileAnimation = () => {
   const devopsCube = new THREE.BoxGeometry(0.08, 0.08, 0.08);
   const devopsCubeMaterial = new THREE.MeshNormalMaterial();
   const devopsCubeMesh = new THREE.Mesh(devopsCube, devopsCubeMaterial);
-  devopsCubeMesh.position.set(0.6, -0.225, 0);
+  devopsCubeMesh.position.set(0.6, -0.525, 0);
   scene.add(devopsCubeMesh);
 
-  const planeDevopsGeometry = new THREE.PlaneGeometry(1.42, 0.13);
+  const planeDevopsGeometry = new THREE.PlaneGeometry(1.35, 0.10);
   const planeDevopsMaterial = new THREE.MeshBasicMaterial();
   planeDevopsMaterial.transparent = true;
   planeDevopsMaterial.opacity = 0;
@@ -189,8 +189,8 @@ export const mobileAnimation = () => {
     planeDevopsMaterial
   );
   planeDevopsGeometry.translate(
-    1.78, //x
-    -1.25, //y
+    0, //x
+    -0.53, //y
     0 //z
   );
   planeDevopsMesh.name = "devops";
@@ -200,10 +200,10 @@ export const mobileAnimation = () => {
   const backendCube = new THREE.BoxGeometry(0.08, 0.08, 0.08);
   const backendCubeMaterial = new THREE.MeshNormalMaterial();
   const backendCubeMesh = new THREE.Mesh(backendCube, backendCubeMaterial);
-  backendCubeMesh.position.set(0.6, -0.375, 0);
+  backendCubeMesh.position.set(0.6, -0.275, 0);
   scene.add(backendCubeMesh);
 
-  const planeBackendGeometry = new THREE.PlaneGeometry(1.5, 0.13);
+  const planeBackendGeometry = new THREE.PlaneGeometry(1.35, 0.1);
   const planeBackendMaterial = new THREE.MeshBasicMaterial();
   planeBackendMaterial.transparent = true;
   planeBackendMaterial.opacity = 0;
@@ -212,8 +212,8 @@ export const mobileAnimation = () => {
     planeBackendMaterial
   );
   planeBackendGeometry.translate(
-    1.75, //x
-    -1.05, //y
+    0, //x
+    -0.275, //y
     0 //z
   );
   planeBackendMesh.name = "backend";
@@ -223,10 +223,10 @@ export const mobileAnimation = () => {
   const frontendCube = new THREE.BoxGeometry(0.08, 0.08, 0.08);
   const frontendCubeMaterial = new THREE.MeshNormalMaterial();
   const frontendCubeMesh = new THREE.Mesh(frontendCube, frontendCubeMaterial);
-  frontendCubeMesh.position.set(0.6, -0.525, 0);
+  frontendCubeMesh.position.set(0.6, -0.025, 0);
   scene.add(frontendCubeMesh);
 
-  const planeFrontendGeometry = new THREE.PlaneGeometry(1.5, 0.13);
+  const planeFrontendGeometry = new THREE.PlaneGeometry(1.35, 0.1);
   const planeFrontendMaterial = new THREE.MeshBasicMaterial();
   planeFrontendMaterial.transparent = true;
   planeFrontendMaterial.opacity = 0;
@@ -235,8 +235,8 @@ export const mobileAnimation = () => {
     planeFrontendMaterial
   );
   planeFrontendGeometry.translate(
-    1.75, //x
-    -0.85, //y
+    0, //x
+    -0.025, //y
     0 //z
   );
   planeFrontendMesh.name = "frontend";
