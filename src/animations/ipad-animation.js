@@ -180,19 +180,20 @@ export const ipadAnimation = () => {
   devopsCubeMesh.position.set(0.8, -0.85, 0);
   scene.add(devopsCubeMesh);
 
-  const planeDevopsGeometry = new THREE.PlaneGeometry(1.42, 0.13);
+  const planeDevopsGeometry = new THREE.PlaneGeometry(1.75, 0.13);
   const planeDevopsMaterial = new THREE.MeshBasicMaterial();
   planeDevopsMaterial.transparent = true;
-  planeDevopsMaterial.opacity = 0;
+  planeDevopsMaterial.opacity = 0; // change to see
   const planeDevopsMesh = new THREE.Mesh(
     planeDevopsGeometry,
     planeDevopsMaterial
   );
   planeDevopsGeometry.translate(
-    1.78, //x
-    -1.25, //y
+    -0, //x
+    -0.85, //y
     0 //z
   );
+
   planeDevopsMesh.name = "devops";
   scene.add(planeDevopsMesh);
 
@@ -203,17 +204,17 @@ export const ipadAnimation = () => {
   backendCubeMesh.position.set(0.8, -0.675, 0);
   scene.add(backendCubeMesh);
 
-  const planeBackendGeometry = new THREE.PlaneGeometry(1.5, 0.13);
+  const planeBackendGeometry = new THREE.PlaneGeometry(1.75, 0.13);
   const planeBackendMaterial = new THREE.MeshBasicMaterial();
   planeBackendMaterial.transparent = true;
-  planeBackendMaterial.opacity = 0;
+  planeBackendMaterial.opacity = 0; // change to see
   const planeBackendMesh = new THREE.Mesh(
     planeBackendGeometry,
     planeBackendMaterial
   );
   planeBackendGeometry.translate(
-    1.75, //x
-    -1.05, //y
+    0, //x
+    -0.65, //y
     0 //z
   );
   planeBackendMesh.name = "backend";
@@ -226,17 +227,17 @@ export const ipadAnimation = () => {
   frontendCubeMesh.position.set(0.8, -0.475, 0);
   scene.add(frontendCubeMesh);
 
-  const planeFrontendGeometry = new THREE.PlaneGeometry(1.5, 0.13);
+  const planeFrontendGeometry = new THREE.PlaneGeometry(1.75, 0.13);
   const planeFrontendMaterial = new THREE.MeshBasicMaterial();
   planeFrontendMaterial.transparent = true;
-  planeFrontendMaterial.opacity = 0;
+  planeFrontendMaterial.opacity = 0; //change to see
   const planeFrontendMesh = new THREE.Mesh(
     planeFrontendGeometry,
     planeFrontendMaterial
   );
   planeFrontendGeometry.translate(
-    1.75, //x
-    -0.85, //y
+    0, //x
+    -0.45, //y
     0 //z
   );
   planeFrontendMesh.name = "frontend";
@@ -411,7 +412,6 @@ export const ipadAnimation = () => {
       }
     } else {
       if (currentIntersect) {
-        // console.log('mouse leave')
         canvas.style.cursor = "default";
       }
       currentIntersect = null;

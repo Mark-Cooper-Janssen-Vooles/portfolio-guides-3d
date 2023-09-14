@@ -168,7 +168,6 @@ export const desktopAnimation = () => {
       bevelSegments: 3,
     });
     devopswebdevguide.computeBoundingBox();
-    // console.log(devopswebdevguide.boundingBox)
     devopswebdevguide.translate(
       1.07, //x
       -1.3, //y
@@ -190,13 +189,6 @@ export const desktopAnimation = () => {
   });
 
   // Objects
-  // const planeGeometry = new THREE.PlaneGeometry(5, 2.8)
-  // planeGeometry.computeBoundingBox()
-  // console.log(planeGeometry.boundingBox)
-  // const planeMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 })
-  // const planeMesh = new THREE.Mesh(planeGeometry, planeMaterial)
-  // scene.add(planeMesh)
-
   // Devops Object section
   const devopsCube = new THREE.BoxGeometry(0.1, 0.1, 0.1);
   const devopsCubeMaterial = new THREE.MeshNormalMaterial();

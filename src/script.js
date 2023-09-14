@@ -12,16 +12,19 @@ const resetCanvas = () => {
 };
 
 const renderDesktopAnimation = () => {
+  console.log('render desktop');
   resetCanvas();
   desktopAnimation();
 };
 
 const renderIpadAnimation = () => {
+  console.log('render ipad');
   resetCanvas();
   ipadAnimation();
 };
 
 const renderMobileAnimation = () => {
+  console.log('render mobile');
   resetCanvas();
   mobileAnimation();
 };
