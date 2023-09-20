@@ -301,12 +301,13 @@ export const mobileAnimation = () => {
   const pointer = new THREE.Vector2();
 
   // mouse
-  window.addEventListener("mousemove", (event) => {
+  window.addEventListener("pointermove", (event) => {
+    event.preventDefault();
     pointer.x = (event.clientX / sizes.width) * 2 - 1;
     pointer.y = -(event.clientY / sizes.height) * 2 + 1;
   });
 
-  window.addEventListener("click", () => {
+  window.addEventListener("pointerdown", () => {
     if (currentIntersect) {
       switch (currentIntersect.object) {
         case planeDevopsMesh:

@@ -327,7 +327,6 @@ export const desktopAnimation = () => {
     if (currentIntersect) {
       switch (currentIntersect.object) {
         case planeDevopsMesh:
-          // console.log('plane devops mesh')
           window.open(
             "https://github.com/Mark-Cooper-Janssen-Vooles/devops-webdev-guide",
             "_blank"
@@ -335,7 +334,6 @@ export const desktopAnimation = () => {
           break;
 
         case planeBackendMesh:
-          // console.log('plane backend mesh')
           window.open(
             "https://github.com/Mark-Cooper-Janssen-Vooles/backend-webdev-guide",
             "_blank"
@@ -343,7 +341,6 @@ export const desktopAnimation = () => {
           break;
 
         case planeFrontendMesh:
-          // console.log('plane backend mesh')
           window.open(
             "https://github.com/Mark-Cooper-Janssen-Vooles/frontend-webdev-guide",
             "_blank"
